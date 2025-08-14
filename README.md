@@ -64,7 +64,7 @@ let service = BagbutikService(jwt: try .init(
     -----END PRIVATE KEY-----
     """
 ))
-let response = try await service.request(
+ response = try await service.request(
     .listBundleIdsV1(filters: [.platform([.iOS])],
                      includes: [.profiles],
                      sorts: [.seedIdDescending, .idDescending])
